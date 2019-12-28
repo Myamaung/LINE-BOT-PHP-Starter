@@ -24,13 +24,13 @@
         $arrayPostData['messages'][0]['packageId'] = "2";
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
-        $content = https_get"https://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0";
+        $content = "http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0";
         
         $ch = curl_init();
-      
+      $MT = 'http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0'
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_URL, "https://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0");
-$content = curl_setopt($ch);
+curl_setopt($ch, CURLOPT_URL,$MT);
+$content = curl_setopt($ch, CURLOPT_URL,$MT);
 echo $content;
     }
     #ตัวอย่าง Message Type "Image"
