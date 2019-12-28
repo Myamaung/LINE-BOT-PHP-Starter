@@ -38,9 +38,9 @@ echo $content;
        
         $image_url = "https://188.166.206.43/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "image";
+       
         $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+       
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Location"
