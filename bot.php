@@ -37,7 +37,7 @@ echo $content;
     else if($message == "รูปน้องแมว"){
        
         $image_url = "https://188.166.206.43/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0";
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        
        
     }
     #ตัวอย่าง Message Type "Location"
