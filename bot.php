@@ -24,7 +24,7 @@
         $arrayPostData['messages'][0]['packageId'] = "2";
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
-        $content = http_get('http://188.166.206.43/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/v8?value=0');
+        $content = http_get("http://188.166.206.43/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0");
         
         $ch = curl_init();
       
