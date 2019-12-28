@@ -36,7 +36,7 @@ echo $content;
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูปน้องแมว"){
        
-        $image_url = "https://188.166.206.43/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0";
+        $image_url = "http://188.166.206.43/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0";
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         replyMsg($arrayHeader,$arrayPostData);
     }
