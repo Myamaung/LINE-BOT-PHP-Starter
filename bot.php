@@ -6,7 +6,7 @@
     
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
-    $arrayHeader[] = "Authorization: Bearer {$accessToken}";
+    $arrayHeader[] = "Authorization:Bearer".$accessToken;
     
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
@@ -24,7 +24,7 @@
         $arrayPostData['messages'][0]['packageId'] = "2";
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
-        $content = ("http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0");
+        $content = http_get("http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0");
         
         $ch = curl_init();
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
