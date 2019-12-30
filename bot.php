@@ -1,5 +1,5 @@
 <?php
-    $accessToken = "uRntLuZ40iPnmDTsb0IOawMeLBZOV2o07kwSGvJ/vjSYhfln/CTp0sB8pSgrzi7OHQJswHEDquyeWEZYvQCFO1V4FaYf+f9ZYj1W/7KGBuXDXr53fiXH19IhBLJrqavSVcmJNjU02Hjz8IzW/GYMowdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
+    $accessToken = "I5/9Hf1EYAu2Fq4BwTKe8fN0DMb7N4F6vgkRXzPODJIHVxdWRuGlQLdpo5dm2IJKHQJswHEDquyeWEZYvQCFO1V4FaYf+f9ZYj1W/7KGBuU4dJeVwXTT3ffYy/xuuiio0hmZnS1Fo/Al+oX0vNDvMQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
  
     $arrayHeader = array();
@@ -23,13 +23,8 @@
         $arrayPostData['messages'][0]['packageId'] = "2";
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
-        $content = http_get("http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0");
         
-        $ch = curl_init();
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_URL, "http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0");
-$content = curl_exec($ch);
-echo $content;
+        
     }
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูปน้องแมว"){
@@ -61,11 +56,8 @@ echo $content;
         replyMsg($arrayHeader,$arrayPostData);
     }
  else if($message == "เปิดไฟ"){
-     $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "เรียบร้อย";
-        replyMsg($arrayHeader,$arrayPostData);
-     print file_get_contents('http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=1');
+     
+     print file_get_contents('http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0');
  }
    
 function replyMsg($arrayHeader,$arrayPostData){
