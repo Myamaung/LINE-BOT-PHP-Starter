@@ -1,9 +1,7 @@
 <?php
     $accessToken = "W017NY2TO2oxoIk+aahXQy3zUq38SQ2Xunnl7+MguOBlsoPG3IwcQ2R7vdT8x5AcHQJswHEDquyeWEZYvQCFO1V4FaYf+f9ZYj1W/7KGBuVwt+STSnYoJgdaGM5eLsU33hAn+1GYhsjj4dC0nlxqYgdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
-    $content = file_get_contents('php://input');
-    $arrayJson = json_decode($content, true);
-    
+ 
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization:Bearer".$accessToken;
@@ -17,6 +15,7 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
         replyMsg($arrayHeader,$arrayPostData);
     }
+
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -61,6 +60,10 @@ echo $content;
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
+ if($message == "SW 2 ON"){
+     print file_get_contents('http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=1');
+ }
+   
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
