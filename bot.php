@@ -2,6 +2,10 @@
     $accessToken = "I5/9Hf1EYAu2Fq4BwTKe8fN0DMb7N4F6vgkRXzPODJIHVxdWRuGlQLdpo5dm2IJKHQJswHEDquyeWEZYvQCFO1V4FaYf+f9ZYj1W/7KGBuU4dJeVwXTT3ffYy/xuuiio0hmZnS1Fo/Al+oX0vNDvMQdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
  
+   $content = file_get_contents('php://input');
+    $arrayJson = json_decode($content, true);
+    
+ 
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization:Bearer".$accessToken;
@@ -23,8 +27,9 @@
         $arrayPostData['messages'][0]['packageId'] = "2";
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
-        
-        
+        function replyMsg($arrayHeader,$arrayPostData){
+        $strUrl = "https://api.line.me/v2/bot/message/reply";
+          print file_get_contents('http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0');
     }
     #ตัวอย่าง Message Type "Image"
     else if($message == "รูปน้องแมว"){
@@ -55,10 +60,6 @@
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
- else if($message == "เปิดไฟ"){
-     
-     print file_get_contents('http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=0');
- }
    
 function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
