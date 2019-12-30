@@ -1,5 +1,5 @@
 <?php
-    $accessToken = "W017NY2TO2oxoIk+aahXQy3zUq38SQ2Xunnl7+MguOBlsoPG3IwcQ2R7vdT8x5AcHQJswHEDquyeWEZYvQCFO1V4FaYf+f9ZYj1W/7KGBuVwt+STSnYoJgdaGM5eLsU33hAn+1GYhsjj4dC0nlxqYgdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
+    $accessToken = "uRntLuZ40iPnmDTsb0IOawMeLBZOV2o07kwSGvJ/vjSYhfln/CTp0sB8pSgrzi7OHQJswHEDquyeWEZYvQCFO1V4FaYf+f9ZYj1W/7KGBuXDXr53fiXH19IhBLJrqavSVcmJNjU02Hjz8IzW/GYMowdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
     
  
     $arrayHeader = array();
