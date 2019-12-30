@@ -60,7 +60,11 @@ echo $content;
         $arrayPostData['messages'][1]['stickerId'] = "131";
         replyMsg($arrayHeader,$arrayPostData);
     }
- if($message == "SW 2 ON"){
+ else if($message == "เปิดไฟ"){
+     $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เรียบร้อย";
+        replyMsg($arrayHeader,$arrayPostData);
      print file_get_contents('http://blynk-cloud.com/OsOZS2EVhI2ptYrsJ9g1u3rBmCkhsjbH/update/V8?value=1');
  }
    
